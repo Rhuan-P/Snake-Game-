@@ -11,24 +11,16 @@ pygame.init()
 
 
 #variaveis de localização
-alt = 720
-larg = 720
+alt = 200
+larg = 1000
 
 y = larg/2
 x = alt/2
 
-x_m = randint(50,650)
-y_m = randint(50, 650)
+x_m = randint(50,larg - 50)
+y_m = randint(50, alt -50)
 
-def spawn(R):
-    
-    R= randint(0,100)
-   
-    
-    if R > 1:
-        
-        x_m = randint(50,650)
-        y_m = randint(50, 650)
+
         
         
         
@@ -98,14 +90,14 @@ while True:
     x += xc
     y += yc
  #respawn parede
-    if y > larg-50:
+    if y > alt-50:
         y = 20
-    if x > alt-50:
+    if x > larg-50:
         x=20
     if x < 20:
-        x = alt-50
+        x = larg-50
     if y < 20:
-        y = larg-50
+        y = alt -50
 
    
    #spawn object
@@ -124,8 +116,8 @@ while True:
     if cobra.colliderect(maca):
         macas += 1
         frame += 3
-        x_m = randint(50,650)
-        y_m = randint(50,650)
+        x_m = randint(50,larg - 50)
+        y_m = randint(50,alt - 50)
         
     else:
         R= randint(0,200)
@@ -133,8 +125,8 @@ while True:
     
         if R == 100:
             
-            x_m = randint(50,650)
-            y_m = randint(50, 650)
+            x_m = randint(50,larg - 50)
+            y_m = randint(50, alt -50)
         
         
         
