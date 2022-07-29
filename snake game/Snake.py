@@ -11,11 +11,11 @@ pygame.init()
 
 
 #variaveis de localização
-larg = 720
 alt = 720
+larg = 720
 
-y = alt/2
-x = larg/2
+y = larg/2
+x = alt/2
 
 x_m = randint(50,650)
 y_m = randint(50, 650)
@@ -45,7 +45,7 @@ yc = 0
 
 #variaveis de apresentação
 fonte = pygame.font.SysFont("arial",30, True,False)
-tela= pygame.display.set_mode((alt, larg))
+tela= pygame.display.set_mode((larg, alt))
 fps = pygame.time.Clock()
 pygame.display.set_caption("GameTest by Mazonia")
 
@@ -98,14 +98,14 @@ while True:
     x += xc
     y += yc
  #respawn parede
-    if y > alt-50:
+    if y > larg-50:
         y = 20
-    if x > larg-50:
+    if x > alt-50:
         x=20
     if x < 20:
-        x = larg-50
+        x = alt-50
     if y < 20:
-        y = alt-50
+        y = larg-50
 
    
    #spawn object
@@ -149,5 +149,5 @@ while True:
    
    
    
-    tela.blit (mensage,(larg/2 - 20,0))
-    pygame.display.update()    
+    tela.blit (mensage,(alt/2 - 20,0))
+    pygame.display.updalte()    
