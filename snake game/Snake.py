@@ -11,8 +11,8 @@ pygame.init()
 
 
 #variaveis de localização
-alt = 200
-larg = 1000
+alt = 720
+larg = 720
 
 y = larg/2
 x = alt/2
@@ -141,5 +141,5 @@ while True:
    
    
    
-    tela.blit (mensage,(alt/2 - 20,0))
+    tela.blit (mensage,(larg/2 - 20,0))
     pygame.display.update()    
