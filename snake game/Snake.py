@@ -150,4 +150,4 @@ while True:
    
    
     tela.blit (mensage,(alt/2 - 20,0))
-    pygame.display.updalte()    
+    pygame.display.update()    
