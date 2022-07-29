@@ -20,6 +20,19 @@ x = larg/2
 x_m = randint(50,650)
 y_m = randint(50, 650)
 
+def spawn(R):
+    
+    R= randint(0,100)
+   
+    
+    if R > 1:
+        
+        x_m = randint(50,650)
+        y_m = randint(50, 650)
+        
+        
+        
+
 tam = 30
 sp = 20
 
@@ -110,9 +123,21 @@ while True:
   #colisao
     if cobra.colliderect(maca):
         macas += 1
-        frame += 5
+        frame += 3
         x_m = randint(50,650)
         y_m = randint(50,650)
+        
+    else:
+        R= randint(0,200)
+   
+    
+        if R == 100:
+            
+            x_m = randint(50,650)
+            y_m = randint(50, 650)
+        
+        
+        
         
         
     aumenta(corpo)
